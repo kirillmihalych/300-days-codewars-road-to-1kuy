@@ -1,9 +1,9 @@
 function groupAnagrams(words) {
-  const res = []
   const map = new Map()
 
   for (const word of words) {
     const sortedWord = word.split('').sort().join('')
+    console.log(sortedWord)
     if (map.has(sortedWord)) {
       const values = [...map.get(sortedWord), word]
       console.log(values)
@@ -13,13 +13,8 @@ function groupAnagrams(words) {
     }
   }
 
-  // for (const [word, wordCount] of map) {
-  //   for (let i = 0; i < wordCount; i++) {}
-  //   console.log(word, wordCount)
-  // }
-  console.log(map.get('art'))
   // your turn !
-  return [words]
+  return [...map.values()]
 }
 
 console.log(groupAnagrams(['rat', 'tar', 'star']))
