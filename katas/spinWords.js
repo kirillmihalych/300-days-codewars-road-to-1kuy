@@ -1,6 +1,14 @@
 function spinWords(string) {
   //TODO Have fun :)
-  console.log(string.split(''))
+  return string
+    .split(' ')
+    .map((word) => {
+      if (word.length >= 5) {
+        word = word.split('').reverse('').join('')
+      }
+      return word
+    })
+    .join(' ')
 }
 
-console.log('Hey fellow warriors')
+console.log(spinWords('Hey fellow warriors'))
