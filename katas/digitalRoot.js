@@ -27,3 +27,4 @@ function sum(num, sum = 0) {
 // console.log(digitalRoot(456), 6)
 // console.log(digitalRoot(16), 7)
 console.log(digitalRoot(663274), 1)
+console.log(digitalRoot(633254), 1)
